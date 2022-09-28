@@ -1,0 +1,26 @@
+
+//code for change  dropdown value 
+$(".capitalize").change(function(){
+var option = $(this).val();
+$(".single-option-selector option").each(function(){
+var ss = ($(this).val());
+// alert(ss);
+if (ss.indexOf(option) > -1)
+{
+
+$(".single-option-selector").prop("selectedIndex", 0).val(ss);
+$(this).css("display", "block");
+}
+else{
+$(this).css("display", "none");
+
+}    
+});
+});
+$( document ).ready(function() {
+$('#product-selectors-option-0').prepend('<option selected="selected">Select Model</option>');
+$(".single-option-selector option").each(function(){
+$(this).css("display", "none");
+});
+
+});
